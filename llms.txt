@@ -1,0 +1,51 @@
+# Skill Doctor Lite — Cumulative Web Inc
+
+Skill Doctor Lite is a local-first skill supply-chain linter: point it at
+installed AI-agent skill directories and scan SKILL.md and code files for
+prompt-injection text, exfiltration lines, approval-disabling instructions,
+and embedded secret material — before you install.
+
+- 25-rule versioned catalog (prompt-injection / exfiltration /
+  approval-disabling / embedded-secret); every report pins rules_version so a
+  "clean" verdict is auditable against the exact rules that produced it.
+- Severity-triaged PASS/FAIL verdict — no A–F grades (grading implies a
+  scored trust verdict; this tool does triage).
+- Exit codes for CI/install-time gates: 0 clean · 1 findings at/above
+  --fail-on · 2 usage/IO error.
+- Machine-readable JSON reports built for agent consumption.
+- Stdlib-only Python, no network, no telemetry. Runs entirely on your machine.
+
+## Honest limits
+
+Signature-based triage, NEVER a certificate of safety. A PASS means no known
+signatures matched — it is not proof the skill is safe. Novel attacks,
+obfuscation, and non-text payloads are out of scope by design.
+
+## Web demo
+
+The live demo at https://cumulativewebinc.github.io/cwi-skill-doctor/ runs
+the real engine in your browser — parity-verified finding-for-finding
+(33/33) against the Python CLI, including the real test fixtures.
+
+## Run the CLI
+
+    git clone https://github.com/CumulativeWebInc/cwi-skill-doctor.git
+    cd cwi-skill-doctor/cli
+    python3 -m skill_doctor scan /path/to/skills --format json --fail-on high
+
+## Relationship to Skill Sentinel
+
+Skill Sentinel is the web demo you try in a browser (A–F grades). Skill
+Doctor Lite is the tool you wire into your install pipeline — the
+CLI/pipeline counterpart, local-first, CI-ready.
+
+## Status & business
+
+- LIVE at https://cumulativewebinc.github.io/cwi-skill-doctor/ · 52/52 tests.
+- Built by Cumulative Web Inc. Proprietary — all rights reserved.
+- Store card #6 PENDING: licensing on request via hp@cumulativeweb.com.
+  No prices published without approval.
+
+Machine-readable: https://cumulativewebinc.github.io/cwi-skill-doctor/.well-known/agent-card.json
+Rules: https://cumulativewebinc.github.io/cwi-skill-doctor/rules.json
+Source: https://github.com/CumulativeWebInc/cwi-skill-doctor
