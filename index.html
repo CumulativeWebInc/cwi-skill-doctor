@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skill Doctor Lite — Cumulative Web Inc</title>
 <meta name="description" content="Local-first skill supply-chain linter: scan AI-agent skills for prompt-injection text, exfiltration lines, approval-disabling instructions, and embedded secrets. Interactive demo + installable CLI. $0, stdlib-only, no network.">
+<meta property="og:title" content="Skill Doctor Lite — Cumulative Web Inc">
+<meta property="og:description" content="Scan AI-agent skills for prompt-injection, exfiltration, approval-disabling text, and embedded secrets. Live in your browser — the same 25-rule engine as the CLI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cumulativewebinc.github.io/cwi-skill-doctor/">
+<meta property="og:image" content="https://cumulativewebinc.github.io/cwi-skill-doctor/brand/logo.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Skill Doctor Lite">
+<meta name="twitter:description" content="Signature-based triage for skill supply chains — never a certificate of safety. Live demo, $0.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Skill Doctor Lite","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser (demo) · Python 3.8+ (CLI, stdlib only)","url":"https://cumulativewebinc.github.io/cwi-skill-doctor/","image":"https://cumulativewebinc.github.io/cwi-skill-doctor/brand/logo.jpg","version":"1.0.0","description":"Local-first skill supply-chain linter CLI + interactive web demo: 25-rule versioned catalog (prompt-injection / exfiltration / approval-disabling / embedded-secrets), severity-triaged PASS/FAIL verdicts, machine-readable JSON reports that pin rules_version, exit codes 0/1/2 for CI gates. Web demo parity-verified finding-for-finding against the Python CLI.","publisher":{"@type":"Organization","name":"Cumulative Web Inc","url":"https://cumulativeweb.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free demo and CLI; licensing on request"},"softwareRequirements":"Python 3.8+, stdlib only, no network (CLI)"}
+</script>
 <style>
 :root{--bg:#0b0e13;--card:#131922;--line:#26303d;--ink:#eef3f8;--dim:#9aa7b8;--gold:#d8a94a;--cyan:#4ad8d0;--red:#e0655a;--green:#7ef0c1;--orange:#e0a458}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
@@ -52,6 +63,14 @@ footer{margin-top:36px;color:var(--dim);font-size:.82rem;border-top:1px solid va
 <div class="sub">Local-first skill supply-chain linter — scan AI-agent skills for prompt-injection text, exfiltration lines, approval-disabling instructions, and embedded secrets. A CWI trust-layer product.</div></div>
 </header>
 <div class="badges"><span class="badge">v1.0.0</span><span class="badge">rules v1.0.0 · 25 rules</span><span class="badge">stdlib only</span><span class="badge">$0</span><span class="badge live">LIVE demo — runs the real engine in your browser</span></div>
+
+<section class="panel" id="try-now" style="border:1px solid var(--gold)">
+<h2 style="margin-top:0">Try it now — scan skill text in your browser</h2>
+<p class="sub">The live demo below runs the real 25-rule engine — paste a SKILL.md and get a severity-triaged verdict, parity-verified finding-for-finding against the Python CLI. No install, no accounts, no network — nothing you paste leaves your machine.</p>
+<div class="btnrow"><a href="https://cumulativewebinc.github.io/cwi-skill-doctor/#tab-scan"><button class="primary">Scan skill text now →</button></a>
+<a href="mailto:hp@cumulativeweb.com?subject=Skill%20Doctor%20Lite%20inquiry"><button class="ghost">License it: hp@cumulativeweb.com</button></a></div>
+<p class="sub">Store card #6 PENDING — price on request, never published without approval.</p>
+</section>
 
 <div class="tabs">
 <button class="tab on" data-t="scan">Scan</button>
@@ -113,7 +132,7 @@ python3 -m skill_doctor version</pre>
 <p class="sub">A Cumulative Web Inc trust-layer product. Pricing on request — no prices are published without approval.</p>
 </section>
 
-<footer>© 2026 Cumulative Web Inc · <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a> · rules v1.0.0 · every report pins its rules version.</footer>
+<footer>© 2026 Cumulative Web Inc · <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a> · rules v1.0.0 · every report pins its rules version. Machine-readable: <a href="llms.txt">llms.txt</a> · <a href=".well-known/agent-card.json">agent-card.json</a> · store card #6 PENDING — price on request.</footer>
 </div>
 <script src="scanner.js"></script>
 <script>
