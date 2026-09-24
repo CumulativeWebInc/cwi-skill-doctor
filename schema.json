@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Skill Doctor Lite (v1)",
+  "url": "https://cumulativewebinc.github.io/cwi-skill-doctor/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "author": {
+    "@type": "Organization",
+    "name": "Cumulative Web Inc",
+    "url": "https://cumulativeweb.com/"
+  },
+  "description": "Local-first skill supply-chain linter CLI plus interactive web demo with a 25-rule versioned catalog.",
+  "schema_version": "1.0.0"
+}
